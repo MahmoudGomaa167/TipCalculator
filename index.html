@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="tip-calc-app">
+    <header>
+      <div class="container">
+        <div class="project-title">
+          <img src="images/logo.svg" alt="Splitter app">
+        </div>
+      </div>
+    </header>
+
+
+    <div class="calculator">
+      <div class="container">
+         <div class="calculator-inputs">
+           <form>
+             <div class="bill-input">
+               <label>Bill</label>
+               <input type="number" placeholder="0" name="user_bill" class="bill">
+               <div class="dollar-sign"></div>
+             </div>
+
+             <div class="tip-input">
+               <label>Select Tip %</label>
+               <div class="tip-values">
+                 <button class="button5" value="0.05">5%</button>
+                 <button class="button10" value="0.10">10%</button>
+                 <button class="button15" value="0.15">15%</button>
+                 <button class="button25" value="0.25">25%</button>
+                 <button class="button50" value="0.50">50%</button>
+                 <input type="number" name="user_customTip" placeholder="Custom" class="custom-tip-input">
+               </div>
+             </div>
+
+             <div class="people-input">
+               <div class="people-label">
+                 <label>Number of People</label>
+                 <label class="error">Can't Be Zero</label>
+               </div>
+               <input type="number" name="numberOfPeople" placeholder="0" class="people">
+               <div class="person-icon"></div>
+             </div>
+           </form>
+         </div>
+
+         <div class="results">
+           <div class="bill-sum">
+             <div class="amount-tip">
+               <p>Tip Amount <br><span>/ person</span></p>
+               <span class="amount-result">&dollar;0.00</span>
+             </div>
+             
+             <div class="total">
+               <p>Total <br><span>/ person</span></p>
+               <span class="total-result">&dollar;0.00</span>
+             </div>
+           </div>
+
+            <button class="reset-btn">Reset</button>
+           
+         </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Mahmoud Gomaa</a>.
+    </div>
+  </div>
+  
+
+  <script src="js/app.js"></script>
+</body>
+</html>

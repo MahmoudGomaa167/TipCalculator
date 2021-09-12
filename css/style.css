@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+}
+
+.tip-calc-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container{
+   width: 920px;
+   margin: auto;
+}
+
+.project-title{
+    margin: 50px 0;
+    text-align: center;
+}
+
+.calculator .container{
+    background-color: #fff;
+    display: flex;
+    border-radius: 30px;
+}
+
+.calculator-inputs{
+    flex: 0 0 40%;
+    margin: 45px 32px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 5px;
+}
+
+input{
+    text-align: right;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+    height: 48px;
+    padding: 1px 17px 1px 2px;
+    position: relative;
+    background-color: hsl(189, 41%, 97%);
+    border: 3px solid transparent;
+    transition: all 0.25s ease-in-out;
+}
+
+input:focus{
+    outline: none;
+    border-color: hsl(172, 67%, 45%);
+}
+
+input::placeholder{
+    color: hsl(183, 100%, 15%);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.bill-input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.bill-input .dollar-sign{
+    position: absolute;
+    background-image: url(../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    left: 20px;
+    bottom: 20px;
+}
+
+.tip-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.tip-input .tip-values{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(117px, 2fr));
+    gap: 14px 16px;
+}
+
+.tip-input .tip-values button{
+    height: 54px;
+    font-size: 24px;
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    line-height: 1.5;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.tip-input .tip-values button:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-input .tip-values input{
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.people-input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.people-label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    color: red;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+.people-input .person-icon{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icon-person.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.results{
+    flex: 0 0 39%;
+    border-radius: 15px;
+    margin: 32px;
+    margin-left: 0;
+    padding: 40px;
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.amount-tip,
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amount-tip p,
+.total p{
+    color: #fff;
+    font-weight: 700;
+}
+
+.amount-tip p span,
+.total p span{
+    color: hsl(184, 14%, 56%);
+    font-size: 13px;
+}
+
+.amount-result,
+.total-result{
+    font-size: 48px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+
+.reset-btn{
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.reset-btn:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calculator-inputs{
+        margin: 45px auto;
+        width: 90%;
+    }
+
+    .tip-input .tip-values{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(117px, 1fr));
+        gap: 14px 16px;
+    }
+
+    .results{
+        margin: 32px auto;
+        width: 70%;
+    }
+
+}
